@@ -11,7 +11,8 @@
   "aliases": {
     "default": [
       "eslint",
-      "jest"
+      "jest",
+      "essentials"
     ]
   }
 }
