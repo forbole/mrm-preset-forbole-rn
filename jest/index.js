@@ -37,7 +37,6 @@ function task(){
                     "node"
                 ],
                 setupFilesAfterEnv: [
-                    "<rootDir>/jest/globalMock.js",
                     "@testing-library/jest-native/extend-expect",
                     "<rootDir>/jest/setupAfterEnv.js"
                 ]
