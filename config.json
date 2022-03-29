@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "email": "",
+  "url": "",
+  "github": "",
+  "minNode": "12",
+  "license": "MIT",
+  "styles": "scss",
+  "scripts": "ts",
+  "template": "none",
+  "aliases": {
+    "default": [
+      "eslint",
+      "editorconfig"
+    ]
+  }
+}

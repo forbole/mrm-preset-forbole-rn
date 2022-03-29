@@ -1,0 +1,14 @@
+{
+  "name": "mrm-preset-forbole-rn-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mrm-core": "^7.0.0"
+  }
+}
