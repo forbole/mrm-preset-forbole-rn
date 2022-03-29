@@ -31,17 +31,14 @@ function task() {
 
     // delete old .eslintrc.js, create new .eslintrc.json
     deleteFiles('.eslintrc.js');
-
     const eslintConfigJSON = json(
         '.eslintrc.json',
         config
     );
-
     eslintConfigJSON.save();
 
     // create .eslintIgnore file
     const eslintIgnore = lines('.eslintignore', ignoreConfig);
-
     eslintIgnore.save();
 }
 

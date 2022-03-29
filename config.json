@@ -11,7 +11,7 @@
   "aliases": {
     "default": [
       "eslint",
-      "editorconfig"
+      "jest"
     ]
   }
 }
