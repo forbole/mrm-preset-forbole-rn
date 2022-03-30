@@ -20,9 +20,9 @@ function task(){
 
     // copy i18n files to project directory
     copyFiles(i18nFilePath, [
-        'locales/en/common.js',
-        'locales/en/index.ts',
-        'locales/i18n.ts'
+        'src/assets/locales/en/common.json',
+        'src/assets/locales/en/index.ts',
+        'src/assets/locales/i18n.ts'
     ]);
 
     console.info('i18next: Installation is not 100% automatic! Please see Additional Installation step in the README for details.')

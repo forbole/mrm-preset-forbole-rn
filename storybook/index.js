@@ -67,7 +67,7 @@ function task() {
         .save();
 
     // copy index.storybook.js to project root
-    copyFiles(baseSbFiles, 'index.storybook.js');
+    copyFiles(sbFilePath, 'index.storybook.js');
 
     // Add copy scripts to package.json
     packageJson()
