@@ -65,6 +65,23 @@ function task() {
             }
         })
         .save();
+
+    // copy index.storybook.js to project root
+    copyFiles(baseSbFiles, 'index.storybook.js');
+
+    console.info('A index.storybook.js file has been copied into the project root. This will serve as the app\'s entry point when running storybook. Please make a copy of your existing index.js file as index.main.js');
+
+    // Add copy scripts to package.json
+    packageJson()
+        .appendScript(
+            'use:main',
+            'cp index.main.js index.js'
+        )
+        .appendScript(
+            'use:storybook',
+            'cp index.storybook.js index.js'
+        )
+        .save();
 }
 
 module.exports.description = 'Install storybook for react native';
