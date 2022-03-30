@@ -9,6 +9,7 @@ This preset contains the following tasks:
 3. essentials
 4. husky
 5. storybook
+6. i18next
 
 ## Usage
 ### Pre-requisites
@@ -43,4 +44,19 @@ yarn mrm all --preset mrm-preset-forbole-rn
 4. Clean Up: After installation, remove mrm and this preset.
 ```shell
 yarn remove mrm mrm-preset-forbole-rn 
+```
+
+### Additional Setup
+The following tasks are not 100% automatic.
+1. storybook
+
+An `index.storybook.js` file will be copied to the root directory, along with the necessary `use:main` and `use:storybook` scripts to switch between app modes. 
+
+The existing `index.js` file in the project root should be copied into `index.main.js` to finalize installation.
+
+2. i18next
+
+`index.js`, `index.main.js` and `index.storybook.js` should be modified by adding the following import to initialize i18n.
+```shell
+import './src/assets/locales/i18n
 ```
