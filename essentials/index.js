@@ -1,12 +1,28 @@
 const {
     install,
     makeDirs,
-    lines,
-    packageJson
+    packageJson,
+    copyFiles
 } = require('mrm-core');
 
-const jestSetupConfig = require('./jestSetupConfig');
-const packages = require('./packages');
+const packages = [
+    "@react-navigation/native",
+    "react-native-screens",
+    "react-native-safe-area-context",
+    "@react-navigation/stack",
+    "react-native-gesture-handler",
+    "@react-native-masked-view/masked-view",
+    "formik",
+    "yup",
+    "graphql",
+    "@apollo/client"
+];
+
+const {
+    baseFilePath
+} = require('../lib/constants');
+
+const essentialsFilePath = `${baseFilePath}/essentials`
 
 /**
  * Install essential develop packages
@@ -29,9 +45,7 @@ function task() {
 
     // react-navigation compat - Create jest mocks.
     makeDirs('jest');
-    lines('jest/setup.js')
-        .add(jestSetupConfig)
-        .save();
+    copyFiles(essentialsFilePath, ['jest/setup.js'])
 
     packageJson()
         .merge({

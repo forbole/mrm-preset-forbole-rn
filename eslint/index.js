@@ -1,9 +1,7 @@
-const config = require('./config');
 const {
-    json,
-    lines,
     install,
-    deleteFiles
+    deleteFiles,
+    copyFiles
 } = require('mrm-core');
 
 const deps = [
@@ -18,28 +16,19 @@ const deps = [
     "eslint-plugin-react-native"
 ];
 
-const ignoreConfig = [
-    "assets",
-    "storybook",
-    "jest"
-];
+const {
+    baseFilePath
+} = require('../lib/constants');
 
+const eslintFilePath = `${baseFilePath}/eslint`;
 
 function task() {
     // Install eslint config and plugins to dev-deps
     install(deps, {yarn: true});
 
-    // delete old .eslintrc.js, create new .eslintrc.json
+    // delete old .eslintrc.js, copy .eslintignore and .eslitnrc.json files
     deleteFiles('.eslintrc.js');
-    const eslintConfigJSON = json(
-        '.eslintrc.json',
-        config
-    );
-    eslintConfigJSON.save();
-
-    // create .eslintIgnore file
-    const eslintIgnore = lines('.eslintignore', ignoreConfig);
-    eslintIgnore.save();
+    copyFiles(eslintFilePath, ['.eslintignore', '.eslintrc.json']);
 }
 
 module.exports.description = 'Adds eslint configured for react native projects';

@@ -1,7 +1,8 @@
 const {
     install,
-    lines,
-    makeDirs, packageJson
+    makeDirs,
+    packageJson,
+    copyFiles
 } = require('mrm-core');
 
 const deps = [
@@ -9,7 +10,11 @@ const deps = [
     "@testing-library/jest-native"
 ];
 
-const setupAfterEnvConfig = require('./setupAfterEnvConfig');
+const {
+    baseFilePath
+} = require('../lib/constants');
+
+const jestFilePath = `${baseFilePath}/jest`
 
 function task(){
     // Install testing library dependencies
@@ -17,8 +22,7 @@ function task(){
 
     // create jest/setupAfterEnv.js file
     makeDirs('jest');
-    const setupAfterEnv = lines('jest/setupAfterEnv.js', setupAfterEnvConfig);
-    setupAfterEnv.save();
+    copyFiles(jestFilePath, ['jest/setupAfterEnv.js'])
 
     // load setupAfterEnv as part of jest config
     packageJson()

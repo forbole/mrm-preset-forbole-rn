@@ -6,7 +6,11 @@ const {
     deleteFiles
 } = require('mrm-core');
 
-const baseFilePath = `./node_modules/mrm-preset-forbole-rn/storybook`;
+const {
+    baseFilePath
+} = require('../lib/constants')
+
+const sbFilePath = `${baseFilePath}/storybook`;
 
 const baseSbFiles = [
     'storybook/stories'
@@ -22,13 +26,13 @@ function task() {
     deleteFiles(baseSbFiles);
 
     // Copy base storybook files to storybook directory
-    copyFiles(`${baseFilePath}`, ['storybook/index.js', 'storybook/decorators/SBContainer/index.tsx', 'storybook/decorators/SBProvider/index.tsx']);
+    copyFiles(`${sbFilePath}`, ['storybook/index.js', 'storybook/decorators/SBContainer/index.tsx', 'storybook/decorators/SBProvider/index.tsx']);
 
     // install sb addons
     install(['@storybook/addon-ondevice-actions'], {yarn: true});
 
     // copy globalMock to jest/ folder, and add it to jest config in package.json
-    copyFiles(baseFilePath, ['jest/globalMock.js']);
+    copyFiles(sbFilePath, ['jest/globalMock.js']);
     packageJson()
         .merge({
             jest: {
