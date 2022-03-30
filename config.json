@@ -13,17 +13,12 @@
       "eslint",
       "jest",
       "essentials",
-      "storybook"
+      "storybook",
+     "i18next",
+      "husky"
     ],
     "extra": [
       "husky"
-    ],
-    "all": [
-      "eslint",
-      "jest",
-      "essentials",
-      "husky",
-      "storybook"
     ]
   }
 }
