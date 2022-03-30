@@ -12,12 +12,17 @@ This preset contains the following tasks:
 
 ## Usage
 ### Pre-requisites
+1. Initialize a new typescript react-native project
+```shell
+npx react-native init {{APP_NAME_GOES_HERE}} --template react-native-template-typescript
+```
+
 If installing with `all` option, the following packages should be installed first:
-1. lint-staged
+2. lint-staged
 ```shell
 npx mrm@2 lint-staged
 ```
-2. storybook
+3. storybook
 ```shell
 npx -p @storybook/cli sb init --type react_native
 ```
