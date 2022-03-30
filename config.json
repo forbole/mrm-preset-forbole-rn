@@ -12,7 +12,8 @@
     "default": [
       "eslint",
       "jest",
-      "essentials"
+      "essentials",
+      "storybook"
     ],
     "extra": [
       "husky"
@@ -21,7 +22,8 @@
       "eslint",
       "jest",
       "essentials",
-      "husky"
+      "husky",
+      "storybook"
     ]
   }
 }
