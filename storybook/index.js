@@ -26,7 +26,7 @@ function task() {
     deleteFiles(baseSbFiles);
 
     // Copy base storybook files to storybook directory
-    copyFiles(`${sbFilePath}`, ['storybook/index.js', 'storybook/decorators/SBContainer/index.tsx', 'storybook/decorators/SBProvider/index.tsx']);
+    copyFiles(`${sbFilePath}`, ['storybook/index.js', 'storybook/decorators/SBContainer/index.tsx']);
 
     // install sb addons
     install(['@storybook/addon-ondevice-actions'], {yarn: true});
