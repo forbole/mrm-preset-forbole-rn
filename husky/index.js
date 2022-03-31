@@ -41,7 +41,7 @@ function task() {
     packageJson()
         .merge({
             "lint-staged":{
-                "*.{js,jsx,ts,tsx}": "eslint --cache --max-warnings=0 --quiet"
+                "*.{js,jsx,ts,tsx}": "eslint --cache --quiet"
             }
         })
         .save();
