@@ -33,11 +33,6 @@ function task() {
     //     .add(prePushConfig)
     //     .save();
 
-    /**
-     * Patch existing lint-staged script
-     * The combination of --max-warnings=0 and --quiet will make the commit fail if
-     * an error is detected in the staged files.
-     */
     packageJson()
         .merge({
             "lint-staged":{
