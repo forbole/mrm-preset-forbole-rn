@@ -2,7 +2,8 @@ const {
     install,
     makeDirs,
     packageJson,
-    copyFiles
+    copyFiles,
+    lines
 } = require('mrm-core');
 
 const packages = [
@@ -55,6 +56,17 @@ function task() {
                     ]
                 }
             }
+        )
+        .save();
+
+    // @react-navigation/stack compat
+    const appJS = lines('App.js').get();
+    lines('App.js')
+        .set(
+            [
+                `import 'react-native-gesture-handler`,
+                ...appJS
+            ]
         )
         .save();
 
