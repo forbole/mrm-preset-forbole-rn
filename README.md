@@ -26,11 +26,11 @@ yarn add -D mrm
 ```
 2. Install this preset package
 ```shell
-yarn add -D mrm-preset-forbole-rn 
+yarn add -D @forbole/mrm-preset-forbole-rn
 ```
 3. Run the preset's MRM scripts
 ```shell
-yarn mrm default --preset mrm-preset-forbole-rn 
+yarn mrm default --preset @forbole/mrm-preset-forbole-rn 
 ```
 4. Clean Up: After installation, remove mrm and this preset.
 ```shell
