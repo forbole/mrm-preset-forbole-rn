@@ -15,9 +15,12 @@ const aliasPaths = [
     'assets',
     'components',
     'config',
-    'storybook',
-    'jest'
 ];
+
+const rootFolderPaths = [
+    'jest',
+    'storybook'
+]
 
 const {baseFilePath} = require('../lib/constants');
 
@@ -28,10 +31,17 @@ function task() {
     install('babel-plugin-module-resolver', {yarn: true});
 
     // Pre-build the babel.config.js and tsconfig.paths.json
-    const babelAlias = aliasPaths.reduce((acc, cur) => ({
+    const babelSrcAlias = aliasPaths.reduce((acc, cur) => ({
         ...acc,
         [cur]: `./src/${cur}`
     }), {});
+
+    const babelRootAlias = rootFolderPaths.reduce((acc, cur) => ({
+        ...acc,
+        [cur]: `./${cur}`
+    }), {});
+
+    const babelAlias = {...babelSrcAlias, ...babelRootAlias};
 
     const babelPathAlias = [
         'module-resolver',
@@ -62,7 +72,7 @@ function task() {
         .save();
 
     // build tsconfig.paths.json
-    const tsPaths = aliasPaths.reduce((acc, cur) => ({
+    const tsSrcPaths = aliasPaths.reduce((acc, cur) => ({
         ...acc,
         [`${cur}`]: [
             `./${cur}`
@@ -71,6 +81,21 @@ function task() {
             `./${cur}/*`
         ],
     }), {});
+
+    const tsRootPaths = rootFolderPaths.reduce((acc, cur) => ({
+        ...acc,
+        [`${cur}`]: [
+            `../${cur}`
+        ],
+        [`${cur}/*`]: [
+            `../${cur}/*`
+        ],
+    }), {});
+
+    const tsPaths = {
+        ...tsSrcPaths,
+        ...tsRootPaths
+    };
 
     const tsPathsConfig = {
         "compilerOptions": {
