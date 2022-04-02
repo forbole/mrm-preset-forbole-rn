@@ -19,7 +19,7 @@ npx mrm@2 lint-staged
 npx -p @storybook/cli sb init --type react_native
 ```
 
-### Installation
+### Installation & Usage
 1. Install mrm version 2 to local dev dependencies
 ```shell
 yarn add -D mrm
@@ -34,7 +34,7 @@ yarn mrm default --preset @forbole/mrm-preset-forbole-rn
 ```
 4. Clean Up: After installation, remove mrm and this preset.
 ```shell
-yarn remove mrm mrm-preset-forbole-rn 
+yarn remove mrm @forbole/mrm-preset-forbole-rn 
 ```
 
 ### Additional Setup
@@ -49,7 +49,7 @@ The existing `index.js` file in the project root should be copied into `index.ma
 
 `index.js`, `index.main.js` and `index.storybook.js` should be modified by adding the following import to initialize i18n.
 ```shell
-import './src/assets/locales/i18n
+import './src/assets/locales/i18n'
 ```
 
 ## Contents
