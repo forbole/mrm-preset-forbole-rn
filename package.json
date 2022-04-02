@@ -1,14 +1,33 @@
 {
-  "name": "mrm-preset-forbole-rn",
+  "name": "@forbole/mrm-preset-forbole-rn",
   "version": "1.0.0",
-  "description": "",
+  "description": "MRM preset for scaffolding react-native projects [@Forbole](https://github.com/forbole).",
   "main": "config.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "mrm-core": "^7.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forbole/mrm-preset-forbole-rn.git"
+  },
+  "keywords": [
+    "mrm-preset",
+    "mrm",
+    "preset",
+    "forbole",
+    "react-native"
+  ],
+  "bugs": {
+    "url": "https://github.com/forbole/mrm-preset-forbole-rn/issues"
+  },
+  "homepage": "https://github.com/forbole/mrm-preset-forbole-rn#readme"
 }
