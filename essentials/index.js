@@ -16,7 +16,14 @@ const packages = [
     "formik",
     "yup",
     "graphql",
-    "@apollo/client"
+    "@apollo/client",
+    "numeral",
+    "big.js"
+];
+
+const devPackages = [
+    "@types/numeral",
+    "@types/big.js"
 ];
 
 const {
@@ -41,6 +48,14 @@ function task() {
         {
             yarn: true,
             dev: false
+        }
+    );
+
+    // Install dev packages
+    install(
+        devPackages,
+        {
+            yarn: true
         }
     );
 
