@@ -14,11 +14,9 @@
       "jest",
       "essentials",
       "storybook",
-     "i18next",
-      "husky"
-    ],
-    "extra": [
-      "husky"
+      "i18next",
+      "husky",
+      "license"
     ]
   }
 }
