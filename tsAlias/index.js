@@ -5,18 +5,23 @@ const {
     template
 } = require('mrm-core');
 
+// alias paths that live in the /src folder
 const aliasPaths = [
-    'types',
-    'screens',
-    'services',
-    'navigation',
-    'hooks',
-    'lib',
     'assets',
     'components',
     'config',
+    'contexts',
+    'hooks',
+    'lib',
+    'navigation',
+    'screens',
+    'services',
+    'types',
 ];
 
+/**
+ * alias paths that live in the project root
+ */
 const rootFolderPaths = [
     'jest',
     'storybook'
