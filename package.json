@@ -1,6 +1,6 @@
 {
   "name": "@forbole/mrm-preset-forbole-rn",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MRM preset for scaffolding react-native projects [@Forbole](https://github.com/forbole).",
   "main": "config.json",
   "scripts": {

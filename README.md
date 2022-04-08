@@ -9,12 +9,12 @@ MRM preset for scaffolding react-native projects [@Forbole](https://github.com/f
 npx react-native init {{APP_NAME_GOES_HERE}} --template react-native-template-typescript
 ```
 
-If installing with `all` option, the following packages should be installed first:
-2. lint-staged
+2. Install lint-staged
 ```shell
 npx mrm@2 lint-staged
 ```
-3. storybook
+
+3. Install storybook for react-native
 ```shell
 npx -p @storybook/cli sb init --type react_native
 ```
