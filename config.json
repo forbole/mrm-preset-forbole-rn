@@ -16,7 +16,8 @@
       "storybook",
       "i18next",
       "husky",
-      "license"
+      "license",
+      "tsAlias"
     ]
   }
 }
