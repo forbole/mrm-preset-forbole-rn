@@ -20,7 +20,7 @@ npx -p @storybook/cli sb init --type react_native
 ```
 
 ### Installation & Usage
-1. Install mrm version 2 to local dev dependencies
+1. Install mrm to local dev dependencies
 ```shell
 yarn add -D mrm
 ```
