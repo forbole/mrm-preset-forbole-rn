@@ -75,8 +75,8 @@ function task() {
         .save();
 
     // @react-navigation/stack compat
-    const appJS = lines('App.js').get();
-    lines('App.js')
+    const appJS = lines('App.tsx').get();
+    lines('App.tsx')
         .set(
             [
                 `import 'react-native-gesture-handler`,
