@@ -79,7 +79,7 @@ function task() {
     lines('App.tsx')
         .set(
             [
-                `import 'react-native-gesture-handler`,
+                `import 'react-native-gesture-handler';`,
                 ...appJS
             ]
         )
