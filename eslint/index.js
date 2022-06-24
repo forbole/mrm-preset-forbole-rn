@@ -28,7 +28,7 @@ function task() {
 
     // delete old .eslintrc.js, copy .eslintignore and .eslitnrc.json files
     deleteFiles('.eslintrc.js');
-    copyFiles(eslintFilePath, ['.eslintignore', '.eslintrc.json']);
+    copyFiles(eslintFilePath, ['.eslintignore', '.eslintrc.js']);
 }
 
 module.exports.description = 'Adds eslint configured for react native projects';
